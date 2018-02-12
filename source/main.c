@@ -5,6 +5,7 @@ u8* g_framebuf;
 
 int main(int argc, char **argv)
 {
+    init();
     gfxInitDefault();
 
     while (appletMainLoop())

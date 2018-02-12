@@ -1,1 +1,2 @@
+void init();
 void draw();
