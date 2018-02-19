@@ -31,7 +31,7 @@ static inline void DrawPixel(uint32_t x, uint32_t y, color_t clr)
     if (x >= 1280 || y >= 720)
         return;
 
-    u32 off = 4*gfxGetFramebufferDisplayOffset(x, y);
+    u32 off = (y * 1280 + x)*4;
     g_framebuf[off] = clr.r; off++;
     g_framebuf[off] = clr.g; off++;
     g_framebuf[off] = clr.b; off++;
